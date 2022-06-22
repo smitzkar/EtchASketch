@@ -16,8 +16,8 @@ footer {
 
 #canvas {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  /* grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px 50px; */
 }
 
 .pixel {
