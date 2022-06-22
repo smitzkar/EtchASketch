@@ -21,6 +21,19 @@ function generateCanvas(size)
       canvas.appendChild(pixel);
     }
   }
-}
+};
 
 generateCanvas(canvasSize);
+
+// Function to handle mouse hover  
+const hover = document.getElementsByClassName("pixel");
+for (let element of hover)
+{
+  element.addEventListener("mouseenter", function( event )
+  {
+    // highlight mouseover target  
+    event.target.style.background = "black";
+  });
+}
+
+
