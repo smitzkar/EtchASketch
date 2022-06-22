@@ -23,10 +23,11 @@ function generateCanvas(size)
   }
 };
 
-generateCanvas(canvasSize);
 
-// Function to handle mouse hover  
+// Stores HTMLcollection of all elements with "pixel" class in hover
 const hover = document.getElementsByClassName("pixel");
+// Iterate through hover as if it was an array and assign mouseover function
+function reset(){
 for (let element of hover)
 {
   element.addEventListener("mouseenter", function( event )
@@ -34,6 +35,15 @@ for (let element of hover)
     // highlight mouseover target  
     event.target.style.background = "black";
   });
+};
 }
 
+generateCanvas(canvasSize);
+reset();
 
+// Function to change canvas size
+function resizeCanvas() {
+  canvasSize = prompt();
+  generateCanvas(canvasSize);
+  reset();
+};
